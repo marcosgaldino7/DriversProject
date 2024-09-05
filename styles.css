@@ -1,0 +1,233 @@
+/* Importa a fonte Chakra Petch do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+body {
+    background-image: url(./Images/Formula12024.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+    text-align: center;
+    font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: column; /* Alinha os itens na vertical */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    height: 100vh; /* Preenche a altura total da viewport */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+    color: white;
+    align-items: center;
+}
+
+.search-container {
+    position: relative;
+    /*para servir como ponto de referência para o posicionamento absoluto do .title-container.*/
+    top: 10px; /* Ajuste o valor para controlar a distância do topo */
+    background-color: rgba(255, 255, 255, 0.5);
+    /* cor de fundo com 80% de opacidade */
+    padding: 20px;
+    border-radius: 20px;
+    color: black;
+}
+.title-container {
+    background-color: rgba(255, 255, 255, 0.5);
+    /* cor de fundo com 80% de opacidade */
+    position: absolute;/*posiciona o texto */
+    top: 0px; /* Ajuste o valor para controlar a distância do topo */
+    left: 50%;
+    transform: translateX(-50%);
+    /*left e transform: Essas propriedades centram horizontalmente na página */
+    padding: 20px;
+    border-radius: 20px;
+    color: black;
+    text-align: center;
+    height: 30px;
+}
+/* Estiliza o titulo h1*/
+h1 {
+    margin-top:0%; /* Ajuste o valor conforme necessário */
+    font-size: 1.5rem; /* tamanho da fonte */
+    color: rgb(134, 54, 54); 
+    text-align: center;
+    /*letter-spacing: 0.2rem; /* espaçamento entre as letras*/
+}
+/* estiliza as seções das página */
+section {
+    display: flex; /* usa o Flexbox para layout */
+    flex-direction: column; /* alinha os itens na verticas */ 
+    align-items: center;
+    margin-bottom: 3rem; /* Espaçamento abaixo de cada seção*/
+}
+/* Estiliza os inputs dentro das seções */
+section input {
+    width: 30rem; /* Largura dos inputs */
+    border: none; /* Remove a borda padrão */
+    padding: 1rem; /* Espaçamento interno */
+    border-radius: 1.5rem; /* Borda arredondada */
+    margin-bottom: 1rem; /* Espaçamento abaixo dos inputs */
+    color: #45474B; /* Cor do texto */
+    font-size: 1rem; /* Tamanho da fonte */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+    text-align: center;
+}
+
+/* Estiliza os botões dentro das seções */
+section button {
+    padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 1.5rem; /* Borda arredondada */
+    background-color: #30475E; /* Cor de fundo do botão */
+    color: #F5F7F8; /* Cor do texto do botão */
+    font-size: 1rem; /* Tamanho da fonte */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+/* Adiciona efeito hover ao botão de pesquisa */
+section button:hover {
+    background-color: #30475E; /* Muda a cor de fundo ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
+}
+
+/* Estiliza a caixa de resultados da pesquisa */
+.resultados-pesquisa {
+    width: 60rem; /* Largura máxima da caixa de resultados */
+    height: 46vh; /* Altura máxima da caixa de resultados */
+    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+    margin-top: 10rem; /* Espaçamento acima da caixa de resultados */
+    padding: 1rem; /* Espaçamento interno */
+    border-radius: 0.6rem; /* Borda arredondada */
+}
+/* Estiliza cada item de resultado */
+.item-resultado {
+    background: #FFFFFF; /* Cor de fundo dos itens */
+    border-radius: 0.6rem; /* Borda arredondada */
+    padding: 1rem; /* Espaçamento interno */
+    margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+/* Estiliza os títulos dentro dos itens de resultado */
+.item-resultado h2 {
+    font-size: 1.5rem; /* Tamanho da fonte */
+    color: #222831; /* Cor do texto */
+}
+/* Estiliza os links quando são passados o mouse sobre */
+.item-resultado a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Estiliza a descrição meta dentro dos itens de resultado */
+.descricao-meta {
+    color: #45474B; /* Cor do texto */
+    margin: 0.5rem 0; /* Margem acima e abaixo */
+}
+/* Estiliza o rodapé da página */
+.footer-container{
+    background-color: rgba(255, 255, 255, 0.85);
+    /* cor de fundo com 80% de opacidade */
+    color: black;
+    padding: 0;
+    width: 100%; /*largura toral*/
+    height: 15%; /*altura da parte inferior*/
+    position: absolute; /*posição do rodapé*/
+    bottom: 0; /*alinha ao fundo da página */
+    font-size: 0.7rem; 
+    letter-spacing: 0.1rem; /* Espaçamento entre letras em telas menores */
+    line-height: 1.2; /* Diminui o espaçamento entre as linhas */
+}
+
+@media (max-width: 1024px) { /* Ajustar a largura máxima conforme a resolução do iPad Air */
+    Body {
+       background-image: url(./Images/F1Editada.png)
+    }    
+    
+    }
+
+@media (max-width: 768px) {
+
+    body {
+        background-color: rgba(255, 255, 255, 0.1);
+        /* Ajustes para telas menores aqui */
+        background-image: url(./Images/F1Editada.png);
+        background-size: 768px; /* Ajuste o tamanho da imagem */
+        /*font-size: 16px; /* Reduza o tamanho da fonte */
+        /*padding: 20px; /* Adicione padding para melhor visualização */
+    }
+
+    .title-container {
+        height: 15%; /* Aumenta a altura para melhor visibilidade em telas menores */
+        padding: 15px;
+        font-size: 18px; /* Ajusta o tamanho da fonte para telas menores */
+    }
+    
+    h1 {
+        font-size: 1rem; /* Tamanho da fonte em telas menores */
+        letter-spacing: 0.2rem; /* Espaçamento entre letras em telas menores */
+    }
+
+    section input {
+        width: 25rem; /* Largura dos inputs em telas menores */
+        padding: 0.8rem; /* Espaçamento interno em telas menores */
+    }
+
+    .resultados-pesquisa {
+        width: 40rem; /* Largura da caixa de resultados em telas menores */
+        height: 40vh; /* Altura da caixa de resultados em telas menores */
+    }
+
+    .item-resultado h2 {
+        font-size: 1.3rem; /* Tamanho da fonte dos títulos em telas menores */
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+    
+    html {
+        font-size: 14px; /* Reduz o tamanho de fonte base para telas menores */
+      }
+      
+    body {
+        background-image: url(./Images/F1Editada.png);
+        background-size: cover;
+    }
+
+    .title-container {
+        height: 5%; /* Aumenta a altura para melhor visibilidade em telas menores */
+        padding: 3px;
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Reduz o tamanho da fonte para telas menores */
+        letter-spacing: 0.1rem; /* Reduz o espaçamento entre letras para telas menores */
+      }
+
+    section input {
+        /*width: 17rem; /* Largura total dos inputs em telas pequenas */
+        width: 100%; /* Ocupa toda a largura disponível na tela */
+        font-size: 1.0rem; /* Reduz o tamanho da fonte */
+    }
+
+    section input[type="search"]::placeholder {
+        font-size: 0.7rem;
+      }
+
+    section button {
+        padding: 0.6rem 1rem; /* Espaçamento interno do botão em telas pequenas */
+        font-size: 0.9rem; /* Tamanho da fonte do botão em telas pequenas */
+    }
+
+    .resultados-pesquisa {
+        width: 90%; /* Largura da caixa de resultados em telas pequenas */
+        height: 50vh; /* Altura da caixa de resultados em telas pequenas */
+    }
+
+    .item-resultado h2 {
+        font-size: 1.1rem; /* Tamanho da fonte dos títulos em telas pequenas */
+    }
+
+    .footer-container {
+        font-size: 0.9rem; /* Tamanho da fonte do rodapé em telas pequenas */
+
+    }
+}
