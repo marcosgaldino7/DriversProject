@@ -1,5 +1,3 @@
-## **README.md Descontraído para sua Aplicação de Fórmula 1**
-
 ### ️ **Fórmula 1 na Ponta dos Dedos!** ️
 
 **O que faz essa aplicação?**
