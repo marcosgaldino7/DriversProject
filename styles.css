@@ -250,8 +250,19 @@ section button:hover {
       }
       .search-container {
         position: relative;
-        top: 25px;
+        top: 70px; /* Posiciona a metade superior do elemento na metade da altura da viewport */
+        left: 50%; /* Posiciona a metade esquerda do elemento na metade da largura da viewport */
+        transform: translate(-50%, -50%); /* Desloca o elemento para cima e para a esquerda em 50% de sua própria largura e altura */
+        width: 200px; /* Define a largura desejada */
+        height: 60px; /* Define a altura desejada */
       }
+      search-button {
+        font-size: 18px; /* Aumente o tamanho da fonte */
+        padding: 10px; /* Aumente o espaço interno */
+        border-radius: 5px; /* Arredonde as bordas */
+      }
+    
+     
       h1 {
         font-size: 1.5rem;
         letter-spacing: 0.1rem;
@@ -259,21 +270,22 @@ section button:hover {
       
       section input {
         width: 100%;
-        font-size: 1.0rem;
+        font-size: 1.7rem;
       }
       
       section input[type="search"]::placeholder {
-        font-size: 0.7rem;
+        font-size: 30rem;
       }
       
       section button {
-        padding: 0.6rem 1rem;
-        font-size: 0.9rem;
+        padding: 0.9rem 2rem;
+        font-size: 2rem;
       }
       
       .resultados-pesquisa {
-        width: 40rem;
-        height: 40vh;
+        bottom: 5px;
+        width: 350px; /* Define a largura desejada */
+        height: 400px; /* Define a altura desejada */
         overflow-y: auto;
       }
       
