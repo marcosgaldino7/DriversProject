@@ -24,3 +24,5 @@ Quer ajudar a melhorar essa aplicação? Fique à vontade para abrir um pull req
 
 * **Dados:** Os dados dos pilotos e equipes são armazenados em um arquivo JavaScript separado (`dados.js`).
 
+* **O Projeto na ponta dos dedos está acessível no endereço:**napontadosdedos.vercel.app
+
