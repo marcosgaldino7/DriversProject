@@ -138,96 +138,151 @@ section button:hover {
 @media (max-width: 1024px) { /* Ajustar a largura máxima conforme a resolução do iPad Air */
     Body {
        background-image: url(./Images/F1Editada.png)
-    }    
+    }   
+    .resultados-pesquisa{
+        width: 75%; /* Ajuste a largura conforme necessário */
+        height: 25vh;
+        overflow-y: auto;
+        margin: 0 auto;
+        align-items: center; /* Centraliza os itens horizontalmente */
+    } 
     
     }
 
-@media (max-width: 768px) {
+/* Media query para dispositivos com largura máxima de 800px (simulando um dispositivo dobrado) */
+@media (max-width: 800px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+      }
+  
+    .content {
+      width: 100%;
+    }
+  }
 
+  @media (min-width: 768px) and (max-width: 1024px) {
+    /* Estilos específicos para o iPad Air */
     body {
-        background-color: rgba(255, 255, 255, 0.1);
-        /* Ajustes para telas menores aqui */
-        background-image: url(./Images/F1Editada.png);
-        background-size: 768px; /* Ajuste o tamanho da imagem */
-        /*font-size: 16px; /* Reduza o tamanho da fonte */
-        /*padding: 20px; /* Adicione padding para melhor visualização */
-    }
-
-    .title-container {
-        height: 15%; /* Aumenta a altura para melhor visibilidade em telas menores */
-        padding: 15px;
-        font-size: 18px; /* Ajusta o tamanho da fonte para telas menores */
+      font-size: 18px;
     }
     
-    h1 {
-        font-size: 1rem; /* Tamanho da fonte em telas menores */
-        letter-spacing: 0.2rem; /* Espaçamento entre letras em telas menores */
+    .button {
+      padding: 15px;
     }
+  }
+  
+  /* Media query para dispositivos com proporção específica (por exemplo, Surface Duo) */
+  @media (aspect-ratio: 3/2) {
+    .header {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
 
-    section input {
-        width: 25rem; /* Largura dos inputs em telas menores */
-        padding: 0.8rem; /* Espaçamento interno em telas menores */
-    }
-
-    .resultados-pesquisa {
-        width: 40rem; /* Largura da caixa de resultados em telas menores */
-        height: 40vh; /* Altura da caixa de resultados em telas menores */
-    }
-
-    .item-resultado h2 {
-        font-size: 1.3rem; /* Tamanho da fonte dos títulos em telas menores */
-    }
-}
+    @media (max-width: 768px) {
+        body {
+          background-color: rgba(255, 255, 255, 0.1);
+          background-image: url(./Images/F1Editada.png);
+          background-size: 768px;
+        }
+      
+        .title-container {
+          height: 15px;
+          width: 26rem;
+          top: 0px;
+        }
+      
+        h1 {
+          font-size: 1rem;
+          letter-spacing: 0.2rem;
+        }
+      
+        section input {
+          width: 25rem;
+          padding: 0.8rem;
+        }
+      
+        .resultados-pesquisa {
+          width: 75%; /* Ajuste a largura conforme necessário */
+          height: 25vh;
+          overflow-y: auto;
+          margin: 0 auto;
+          align-items: center; /* Centraliza os itens horizontalmente */
+          /* estilizando barra de rolagem*/
+          &::-webkit-scrollbar {
+            width: 10px; /* Largura da barra de rolagem */
+          }
+        
+          &::-webkit-scrollbar-track {
+            background: #f1f1f1; /* Cor de fundo da trilha da barra de rolagem */
+          }
+        
+          &::-webkit-scrollbar-thumb {
+            background: black; /* Cor da barra de rolagem */
+          }
+        }
+      
+        .item-resultado h2 {
+          font-size: 1.3rem;
+        }
+        .footer-container {
+            height: 20%; /* Ajuste o valor da altura conforme necessário */
+          }
+      }
 
 /* Responsividade para celulares */
 @media (max-width: 480px) {
-    
+
     html {
-        font-size: 14px; /* Reduz o tamanho de fonte base para telas menores */
+        font-size: 7px; /* Reduz o tamanho de fonte base para telas menores */
       }
       
-    body {
+      body {
         background-image: url(./Images/F1Editada.png);
         background-size: cover;
-    }
-
-    .title-container {
-        height: 5%; /* Aumenta a altura para melhor visibilidade em telas menores */
-        padding: 3px;
-        background-color: rgba(255, 255, 255, 0.4);
-    }
-
-    h1 {
-        font-size: 1.5rem; /* Reduz o tamanho da fonte para telas menores */
-        letter-spacing: 0.1rem; /* Reduz o espaçamento entre letras para telas menores */
       }
-
-    section input {
-        /*width: 17rem; /* Largura total dos inputs em telas pequenas */
-        width: 100%; /* Ocupa toda a largura disponível na tela */
-        font-size: 1.0rem; /* Reduz o tamanho da fonte */
-    }
-
-    section input[type="search"]::placeholder {
+      
+      .title-container {
+        height: 2%;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.4);
+        position: absolute;
+      }
+      .search-container {
+        position: relative;
+        top: 25px;
+      }
+      h1 {
+        font-size: 1.5rem;
+        letter-spacing: 0.1rem;
+      }
+      
+      section input {
+        width: 100%;
+        font-size: 1.0rem;
+      }
+      
+      section input[type="search"]::placeholder {
         font-size: 0.7rem;
       }
-
-    section button {
-        padding: 0.6rem 1rem; /* Espaçamento interno do botão em telas pequenas */
-        font-size: 0.9rem; /* Tamanho da fonte do botão em telas pequenas */
-    }
-
-    .resultados-pesquisa {
-        width: 90%; /* Largura da caixa de resultados em telas pequenas */
-        height: 50vh; /* Altura da caixa de resultados em telas pequenas */
-    }
-
-    .item-resultado h2 {
-        font-size: 1.1rem; /* Tamanho da fonte dos títulos em telas pequenas */
-    }
-
-    .footer-container {
-        font-size: 0.9rem; /* Tamanho da fonte do rodapé em telas pequenas */
-
-    }
+      
+      section button {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+      }
+      
+      .resultados-pesquisa {
+        width: 40rem;
+        height: 40vh;
+        overflow-y: auto;
+      }
+      
+      .item-resultado h2 {
+        font-size: 1.1rem;
+      }
+      
+      .footer-container {
+        font-size: 0.9rem;
+        height: 15%;
+      }    
 }
